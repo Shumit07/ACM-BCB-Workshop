@@ -22,28 +22,104 @@ A live demonstration will showcase these capabilities in a **heart failure case 
 ---
 
 ## 🎯 Learning Objectives  
-By the end of this workshop, participants will be able to:  
-1. **Recognize** the self-care challenges faced by patients with chronic diseases.  
-2. **Understand** the foundations of RAG and its agentic enhancements.  
-3. **Learn** about architecture components such as LLMs, retrieval pipelines, and orchestration frameworks.  
-4. **Observe** live demos of both RAG and Agentic RAG in action, including data retrieval and validated response generation.  
+By the conclusion of this workshop, participants will be able to:  
+- Recognize challenges in chronic disease self-care and how AI-driven assistants can help.  
+- Understand the fundamentals of **RAG** and how **Agentic RAG** enhances it through multi-step retrieval and orchestration.  
+- Learn about architecture components (LLMs, retrieval pipelines, agent frameworks, medical knowledge bases).  
+- Observe a **live demo** of an Agentic RAG assistant applied to chronic disease management.  
+- Gain familiarity with practical tools and best practices for development, including safety, privacy, and limitations.  
+- Identify opportunities and future research directions for deploying agentic AI in personalized medicine.  
+
+---
+
+## 🎯 Target Audience  
+This workshop is designed for a broad range of participants in **biomedical data science and health informatics**:  
+- Data scientists & machine learning engineers  
+- Biomedical & clinical researchers  
+- Digital health professionals  
+- Clinicians with interest in AI-assisted care  
+
+Attendees should have basic familiarity with **AI/ML concepts** and some **Python coding experience** to follow the technical portions.  
+
+---
+
+## 🗂️ Outline  
+**Duration**: Half-day interactive demonstration (9 AM – 1 PM)  
+**Format**: Mix of presentations, live coding, and case study demonstrations  
 
 ---
 
 ## 🗓️ Proposed Schedule  
-- **09:00–09:45** — Introduction  
-- **10:00–10:45** — Foundations of RAG & Agentic RAG  
-- **11:00–11:45** — *Live Demo 1*: Building a RAG Assistant for Self-Care Management  
-- **11:45–12:30** — *Live Demo 2*: Building an Agentic RAG Assistant  
-- **12:30–13:00** — Conclusion and Q&A  
+
+**09:00–09:45 — Introduction & Background**  
+- Welcome and workshop goals  
+- Chronic disease self-care challenges  
+- Rise of AI in healthcare: From simple chatbots to GPT-based assistants  
+
+**09:45–10:00 — Break / Q&A**  
+
+**10:00–10:45 — From RAG to Agentic RAG: Technical Foundations**  
+- RAG primer with examples  
+- Challenges with static RAG  
+- Agentic RAG explained: plan → retrieve → analyze → iterate  
+- Tools & frameworks (e.g., LangChain, LlamaIndex, OpenAI API)  
+
+**10:45–11:00 — Break / Q&A**  
+
+**11:00–11:45 — Live Demo 1: Building an Agentic RAG Assistant**  
+- Scenario: Diabetes self-care assistant  
+- System architecture (LLM, vector DB, orchestration)  
+- Live coding: agent initialization and query examples  
+
+**11:45–12:30 — Live Demo 2: Case Study & Interactive Q&A**  
+- Audience-driven queries to the agent  
+- Exploring system limitations and guardrails  
+- Evaluation (accuracy, safety, readability)  
+- Extending to other conditions (heart failure, hypertension)  
+
+**12:30–13:00 — Conclusion & Closing Q&A**  
+- Future improvements & research directions  
+- Ethical concerns (privacy, safety, validation)  
+
+---
+
+## 💻 Instructions for Participants  
+
+### Minimum Requirements  
+- Laptop with a modern browser  
+- High-speed internet  
+- (Optional) Google account for **Colab**, or Hugging Face / OpenAI accounts if using APIs  
+- Basic Python familiarity (recommended for notebook demos)  
+
+### Setup & Resources  
+Prior to the workshop, participants will receive:  
+- A **GitHub repository** with example code, notebooks, and sample data  
+- A **Google Colab notebook** for interactive demos  
+
+Steps:  
+1. **Access notebooks**: open in Google Colab (preferred) or download locally  
+2. **Download data**: sample datasets included in repo (synthetic patient records, knowledge bases)  
+3. **Install dependencies**: via `requirements.txt` or provided Colab setup cells  
+4. **API keys (if needed)**: instructions will be provided for any external APIs (e.g., OpenAI GPT)  
+5. **Test environment**: run a provided snippet to confirm everything works before the session  
+
+Participants not running code can still benefit by **observing demos** and interacting with the shared interface.  
 
 ---
 
 ## 👥 Organizers  
-- **Shumit Saha** — Assistant Professor of Biomedical Data Science, Meharry Medical College. Focus: AI for chronic disease management.  
-- **Subash Neupane** — Assistant Professor of Computer Science & Data Science, Meharry Medical College. Focus: grounded generative AI.  
-- **Broderick Bellard** — MSc candidate in Data Science, Meharry Medical College. Focus: explainable ML.  
-- **Himanshu Tripathi** — PhD candidate in Computer Science, University of Alabama. Focus: privacy-preserving ML.  
+
+- **Shumit Saha** — Assistant Professor of Biomedical Data Science, Meharry Medical College, USA.  
+  Research: AI, NLP, and multimodal data for chronic disease management.  
+
+- **Subash Neupane** — Assistant Professor of Computer Science & Data Science, Meharry Medical College, USA.  
+  Research: Grounding Generative AI in verifiable medical knowledge using Neuro-Symbolic AI.  
+
+- **Broderick Bellard** — MSc candidate in Data Science, Meharry Medical College, USA.  
+  Research: AI-driven healthcare, drug repurposing, equitable and explainable ML.  
+
+- **Himanshu Tripathi** — PhD candidate in Computer Science, University of Alabama, USA.
+  Research: Privacy-preserving ML.  
 
 ---
 
