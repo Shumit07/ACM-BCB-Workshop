@@ -28,8 +28,6 @@ By the end of this workshop, participants will be able to:
 - **11:45–12:30** — *Live Demo 2*: Building an Agentic RAG Assistant  
 - **12:30–13:00** — Conclusion and Q&A  
 
-📌 GitHub link to resources: [ACM-BCB-Workshop](https://github.com/Shumit07/ACM-BCB-Workshop)  
-
 ---
 
 ## 👥 Organizers  
