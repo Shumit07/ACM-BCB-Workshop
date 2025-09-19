@@ -2,7 +2,7 @@
 *A Demonstration Workshop*  
 
 ## 🏛️ Workshop Info  
-Will be held at the 16th ACM Conference on Bioinformatics, Computational Biology, and Health Informatics (ACM-BCB 2025). ACM BCB is the flagship conference of the ACM SIGBio (https://acm-bcb.org/). The ACM-BCB 2025 will be held back in USA at Philadelphia, PA, from October 12-15, 2025. 
+Will be held at the 16th ACM Conference on Bioinformatics, Computational Biology, and Health Informatics (ACM-BCB 2025). ACM BCB is the flagship conference of the ACM SIGBio (https://acm-bcb.org/). The ACM-BCB 2025 will be held at Philadelphia, PA, USA from October 12 - 15th, 2025. 
 
 ## 📝 Citing this Workshop  
 Please cite this workshop as:  
