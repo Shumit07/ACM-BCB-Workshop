@@ -1,6 +1,15 @@
 # Agentic Retrieval-Augmented Generation (RAG) for Chronic Disease Self-Care Management  
 *A Demonstration Workshop*  
 
+## 🏛️ Workshop Info  
+Will be held at the 16th ACM Conference on Bioinformatics, Computational Biology, and Health Informatics (ACM-BCB 2025). ACM BCB is the flagship conference of the ACM SIGBio (https://acm-bcb.org/). The ACM-BCB 2025 will be held back in USA at Philadelphia, PA, from October 12-15, 2025. 
+
+## 📝 Citing this Workshop  
+Please cite this workshop as:  
+
+**Saha, S., Neupane, S., Bellard, B., & Tripathi, H. (2025, September). Agentic Retrieval-Augmented Generation (RAG) for Chronic Disease Self-Care Management: A Demonstration Workshop. In ACM Conference on Bioinformatics, Computational Biology, and Health Informatics (ACM-BCB 2025), Philadelphia, PA, USA.**  
+
+
 ## 📖 Overview  
 Chronic diseases account for nearly **74% of global deaths**, highlighting the urgent need for scalable, effective self-care support. While day-to-day management—taking medications, adjusting lifestyle, and monitoring symptoms—is essential, many patients struggle with adherence, especially those with limited health literacy or social support.  
 
