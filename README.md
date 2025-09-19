@@ -37,7 +37,7 @@ This workshop is designed for a broad range of participants in **biomedical data
 - Data scientists & machine learning engineers  
 - Biomedical & clinical researchers  
 - Digital health professionals  
-- Clinicians with interest in AI-assisted care  
+- Clinicians with an interest in AI-assisted care  
 
 Attendees should have basic familiarity with **AI/ML concepts** and some **Python coding experience** to follow the technical portions.  
 
@@ -87,8 +87,9 @@ Management**
 ### Minimum Requirements  
 - Laptop with a modern browser  
 - High-speed internet  
-- (Optional) Google account for **Colab**, or Hugging Face / OpenAI accounts if using APIs  
-- Basic Python familiarity (recommended for notebook demos)  
+- Google Colab account
+- Hugging Face or OpenAI API Key (if you have a Plus account)
+- Basic Python familiarity 
 
 ### Setup & Resources  
 Before the workshop, participants will receive:  
