@@ -53,33 +53,32 @@ Attendees should have basic familiarity with **AI/ML concepts** and some **Pytho
 
 **09:00–09:45 — Introduction & Background**  
 - Welcome and workshop goals  
-- Chronic disease self-care challenges  
-- Rise of AI in healthcare: From simple chatbots to GPT-based assistants  
+- Chronic disease self-care challenges overview
+- PowerPoint presentation: Links coming soon.
 
 **09:45–10:00 — Break / Q&A**  
 
 **10:00–10:45 — From RAG to Agentic RAG: Technical Foundations**  
-- RAG primer with examples  
-- Challenges with static RAG  
-- Agentic RAG explained: plan → retrieve → analyze → iterate  
-- Tools & frameworks (e.g., LangChain, LlamaIndex, OpenAI API)  
+- Introduction to RAG and Agentic RAG
+- Frameworks overview
+- Environment setting up (API keys)
+- PowerPoint presentation: Links coming soon.
 
 **10:45–11:00 — Break / Q&A**  
 
-**11:00–11:45 — Live Demo 1: Building an Agentic RAG Assistant**  
-- Scenario: Diabetes self-care assistant  
-- System architecture (LLM, vector DB, orchestration)  
-- Live coding: agent initialization and query examples  
+**11:00–11:45 — Live Demo 1 - Building a RAG Assistant for Self-Care
+Management**  
+- Scenario: Heart Failure Patients' self-care assistant  
+- System architecture (Naive RAG with a Judge LLM to evaluate answer, OpenAI API Based)  
+- Codes: Links coming soon. 
 
-**11:45–12:30 — Live Demo 2: Case Study & Interactive Q&A**  
-- Audience-driven queries to the agent  
-- Exploring system limitations and guardrails  
-- Evaluation (accuracy, safety, readability)  
-- Extending to other conditions (heart failure, hypertension)  
+**11:45–12:30 — Live Demo 2 - Building an Agentic RAG Assistant.**  
+- An Agentic Workflow for Heart Failure Care Navigation
+- System architecture (Langchain-based)
+- Codes: Links coming soon. 
 
 **12:30–13:00 — Conclusion & Closing Q&A**  
-- Future improvements & research directions  
-- Ethical concerns (privacy, safety, validation)  
+- Future improvements & research directions   
 
 ---
 
@@ -92,7 +91,7 @@ Attendees should have basic familiarity with **AI/ML concepts** and some **Pytho
 - Basic Python familiarity (recommended for notebook demos)  
 
 ### Setup & Resources  
-Prior to the workshop, participants will receive:  
+Before the workshop, participants will receive:  
 - A **GitHub repository** with example code, notebooks, and sample data  
 - A **Google Colab notebook** for interactive demos  
 
