@@ -8,7 +8,7 @@ AI-powered conversational agents have shown promise in bridging this gap, but ex
 
 This workshop introduces an **Agentic Retrieval-Augmented Generation (RAG)** system designed for chronic disease management. Participants will explore how intelligent agents equipped with **multi-step reasoning, dynamic retrieval, and tool usage** can empower patients to take charge of their own care.  
 
-A live demonstration will showcase these capabilities in a **diabetes case study**, while participants gain hands-on exposure to the architecture and workflow needed to build similar systems for broader health applications.  
+A live demonstration will showcase these capabilities in a **heart failure case study**, while participants gain hands-on exposure to the architecture and workflow needed to build similar systems for broader health applications.  
 
 ---
 
