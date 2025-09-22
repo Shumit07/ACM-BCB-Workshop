@@ -7,7 +7,7 @@ Will be held at the 16th ACM Conference on Bioinformatics, Computational Biology
 ## 📝 Citing this Workshop  
 Please cite this workshop as:  
 
-**Saha, S., Neupane, S., Bellard, B., & Tripathi, H. (2025, September). Agentic Retrieval-Augmented Generation (RAG) for Chronic Disease Self-Care Management: A Demonstration Workshop. In ACM Conference on Bioinformatics, Computational Biology, and Health Informatics (ACM-BCB 2025), Philadelphia, PA, USA.**  
+**Saha, S., Neupane, S., Bellard, B., & Tripathi, H. (2025, October). Agentic Retrieval-Augmented Generation (RAG) for Chronic Disease Self-Care Management: A Demonstration Workshop. In ACM Conference on Bioinformatics, Computational Biology, and Health Informatics (ACM-BCB 2025), Philadelphia, PA, USA.**  
 
 
 ## 📖 Overview  
