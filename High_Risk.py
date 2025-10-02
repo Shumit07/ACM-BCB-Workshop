@@ -35,8 +35,8 @@ def High_Risk_Patient_Action(id):
         ER = Find_ER.FindER(Email_Info[3])
         loc = ""
         c = 1
-        for er in ER:
-            loc = loc + f"{c}. {er}: {ER[er]}\n"
+        for name, address in ER.items():
+            loc = loc + f"{c}. {name}: {address}\n"
             c += 1
 
         Send_Email.Email(Email_Info[2], f"‼️URGENT: NEAREST ER‼️",
