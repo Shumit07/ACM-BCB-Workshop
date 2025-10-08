@@ -2,7 +2,7 @@
 *A Demonstration Workshop*  
 
 ## 🏛️ Workshop Info  
-Will be held at the 16th ACM Conference on Bioinformatics, Computational Biology, and Health Informatics (ACM-BCB 2025). ACM BCB is the flagship conference of the ACM SIGBio (https://acm-bcb.org/). The ACM-BCB 2025 will be held at Philadelphia, PA, USA from October 12 - 15th, 2025. 
+Will be held on October 12th from 1 - 5 PM at the 16th ACM Conference on Bioinformatics, Computational Biology, and Health Informatics (ACM-BCB 2025). ACM BCB is the flagship conference of the ACM SIGBio (https://acm-bcb.org/). The ACM-BCB 2025 will be held in Philadelphia, PA, USA from October 12 - 15th, 2025. 
 
 ## 📝 Citing this Workshop  
 Please cite this workshop as:  
@@ -44,7 +44,7 @@ Attendees should have basic familiarity with **AI/ML concepts** and some **Pytho
 ---
 
 ## 🗂️ Outline  
-**Duration**: Half-day interactive demonstration (9 AM – 1 PM)  
+**Duration**: Half-day interactive demonstration (1 - 5 PM)  
 **Format**: Mix of presentations, live coding, and case study demonstrations  
 
 ---
