@@ -24,40 +24,33 @@ The agentic capability is triggered when a user with a 'high-risk' status uses a
 ### Agentic Workflow Diagram
 
 ```mermaid
-[START: User issues 'Take Action' prompt]
-    │
-    ▼
-[Agent: agentic_chatbot.py]
-    │
-    └─── 1. Checks patient risk status
-         ├── If 'low' or 'moderate' risk ──> [Provide reassuring canned response] ──> [STOP]
-         │
-         └── If 'high' risk ──> [Initiate High-Risk Protocol]
-              │
-              ├── 2. Fetches Patient Data from Excel file
-              │
-              ├── 3. Calls Tool: OpenAI_Summarization.Summary_Email()
-              │    │
-              │    ├── Uses OpenAI API to generate a clinical summary
-              │    └── Analyzes data to check if a PCP is on file
-              │
-              └── 4. Reasons: Does the patient have a PCP?
-                   ├── YES ──> [Action Path A: Notify PCP]
-                   │    │
-                   │    └── Calls Tool: Send_Email.Email()
-                   │        ├── Target: PCP's Email
-                   │        └── Content: Urgent message with clinical summary
-                   │
-                   └── NO ──> [Action Path B: Notify Patient with ERs]
-                        │
-                        ├── Calls Tool: Find_ER.FindER()
-                        │   ├── Sub-Tool: Geocoding API (for coordinates)
-                        │   └── Sub-Tool: Overpass API (for nearby hospitals)
-                        │
-                        └── Calls Tool: Send_Email.Email()
-                            ├── Target: Patient's Email
-                            └── Content: Urgent message with clinical summary & ER list
-    │
-    ▼
-[END: Agent responds to user with confirmation of the action taken]
+graph TD
+    A[Start: User issues 'Take Action' prompt] --> B{Agent: agentic_chatbot.py};
+    B --> C{Risk Status Check};
+    C -->|'low' or 'moderate'| D[Provide reassuring canned response];
+    C -->|'high'| E[Initiate High-Risk Protocol: High_Risk_Patient_Action(id)];
+    
+    subgraph High-Risk Protocol
+    E --> F[1. Fetch Patient Data from Excel];
+    F --> G[2. Call Clinical Analyst Tool: OpenAI_Summarization];
+    G --> H[3. OpenAI API: Generate Clinical Summary];
+    H --> I{4. Reason: Does Patient have a PCP?};
+    
+    I -->|Yes| J[Action 1: Notify PCP];
+    J --> K[Tool: Send_Email.Email() to PCP];
+    K --> L[Format Summary & Send];
+    
+    I -->|No| M[Action 2: Notify Patient with ERs];
+    M --> N[Tool: Find_ER.FindER(location)];
+    N --> O[Sub-Tool: Geocoding API to get coordinates];
+    O --> P[Sub-Tool: Overpass API to find hospitals];
+    P --> Q[Format Top 5 ERs];
+    Q --> R[Tool: Send_Email.Email() to Patient];
+    R --> S[Format Summary & ER List & Send];
+    end
+
+    L --> T{End: Respond to User};
+    S --> T;
+    D --> T;
+    T --> |"Protocol initiated: An urgent notification..."| A;
 ```
