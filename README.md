@@ -23,7 +23,7 @@ The agentic capability is triggered when a user with a 'high-risk' status uses a
 
 ### Agentic Workflow Diagram
 
-```text
+```mermaid
 [START: User issues 'Take Action' prompt]
     │
     ▼
