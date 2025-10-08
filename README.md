@@ -21,43 +21,43 @@ The agentic capability is triggered when a user with a 'high-risk' status uses a
 
 ### Workflow Diagram
 
-[User issues 'Take Action' prompt]
- |
- v
-[Agent: agentic_chatbot.py] -> Checks patient risk status
- |
- +-> If 'low' or 'moderate' risk -> [Provide reassuring canned response and STOP]
- |
- +-> If 'high' risk -> [Initiate High-Risk Protocol: High_Risk_Patient_Action()]
-      |
-      |--> 1. Fetch Patient Data from Excel file
-      |
-      |--> 2. Call Tool: OpenAI_Summarization.Summary_Email()
-      |    |
-      |    |--> Uses OpenAI API to generate a clinical summary
-      |    |--> Analyzes data to check if a PCP is on file
-      |
-      |--> 3. Reason: Does the patient have a PCP?
-           |
-           |--> YES: [Action Path A: Notify PCP]
-           |    |
-           |    |--> Call Tool: Send_Email.Email()
-           |    |     |
-           |    |     +-> Target: PCP's Email
-           |    |     +-> Content: Urgent message with clinical summary
-           |
-           |--> NO: [Action Path B: Notify Patient with ERs]
-                |
-                |--> Call Tool: Find_ER.FindER()
-                |    |
-                |    |--> Sub-Tool: Geocoding API (for coordinates)
-                |    |--> Sub-Tool: Overpass API (for nearby hospitals)
-                |    |--> Returns a formatted list of the Top 5 ERs
-                |
-                |--> Call Tool: Send_Email.Email()
-                |     |
-                |     +-> Target: Patient's Email
-                |     +-> Content: Urgent message with clinical summary and ER list
- |
- v
-[Agent responds to user with confirmation of the action taken]
+### Agentic Workflow Diagram
+
+```text
+[START: User issues 'Take Action' prompt]
+    │
+    ▼
+[Agent: agentic_chatbot.py]
+    │
+    └─── 1. Checks patient risk status
+         ├── If 'low' or 'moderate' risk ──> [Provide reassuring canned response] ──> [STOP]
+         │
+         └── If 'high' risk ──> [Initiate High-Risk Protocol]
+              │
+              ├── 2. Fetches Patient Data from Excel file
+              │
+              ├── 3. Calls Tool: OpenAI_Summarization.Summary_Email()
+              │    │
+              │    ├── Uses OpenAI API to generate a clinical summary
+              │    └── Analyzes data to check if a PCP is on file
+              │
+              └── 4. Reasons: Does the patient have a PCP?
+                   ├── YES ──> [Action Path A: Notify PCP]
+                   │    │
+                   │    └── Calls Tool: Send_Email.Email()
+                   │        ├── Target: PCP's Email
+                   │        └── Content: Urgent message with clinical summary
+                   │
+                   └── NO ──> [Action Path B: Notify Patient with ERs]
+                        │
+                        ├── Calls Tool: Find_ER.FindER()
+                        │   ├── Sub-Tool: Geocoding API (for coordinates)
+                        │   └── Sub-Tool: Overpass API (for nearby hospitals)
+                        │
+                        └── Calls Tool: Send_Email.Email()
+                            ├── Target: Patient's Email
+                            └── Content: Urgent message with clinical summary & ER list
+    │
+    ▼
+[END: Agent responds to user with confirmation of the action taken]
+```
