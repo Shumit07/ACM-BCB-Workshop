@@ -2,7 +2,7 @@
 *A Demonstration Workshop*  
 
 ## 🏛️ Workshop Info  
-Will be held on October 12th from 1 - 5 PM at the 16th ACM Conference on Bioinformatics, Computational Biology, and Health Informatics (ACM-BCB 2025). ACM BCB is the flagship conference of the ACM SIGBio (https://acm-bcb.org/). The ACM-BCB 2025 will be held in Philadelphia, PA, USA from October 12 - 15th, 2025. 
+Will be held on October 12th from 1 - 5 PM EST at the 16th ACM Conference on Bioinformatics, Computational Biology, and Health Informatics (ACM-BCB 2025). ACM BCB is the flagship conference of the ACM SIGBio (https://acm-bcb.org/). The ACM-BCB 2025 will be held in Philadelphia, PA, USA from October 12 - 15th, 2025. 
 
 ## 📝 Citing this Workshop  
 Please cite this workshop as:  
@@ -49,35 +49,35 @@ Attendees should have basic familiarity with **AI/ML concepts** and some **Pytho
 
 ---
 
-## 🗓️ Proposed Schedule  
+## 🗓️ Proposed Schedule (1 - 5 PM EST)  
 
-**09:00–09:45 — Introduction & Background**  
+**01:00–01:45 — Introduction & Background**  
 - Welcome and workshop goals  
 - Chronic disease self-care challenges overview
 - PowerPoint presentation: Links coming soon.
 
-**09:45–10:00 — Break / Q&A**  
+**01:45–2:00 — Break / Q&A**  
 
-**10:00–10:45 — From RAG to Agentic RAG: Technical Foundations**  
+**2:00–2:45 — From RAG to Agentic RAG: Technical Foundations**  
 - Introduction to RAG and Agentic RAG
 - Frameworks overview
 - Environment setting up (API keys)
 - PowerPoint presentation: Links coming soon.
 
-**10:45–11:00 — Break / Q&A**  
+**2:45–3:00 — Break / Q&A**  
 
-**11:00–11:45 — Live Demo 1 - Building a RAG Assistant for Self-Care
+**3:00–3:45 — Live Demo 1 - Building a RAG Assistant for Self-Care
 Management**  
 - Scenario: Heart Failure Patients' self-care assistant  
 - System architecture (Naive RAG with a Judge LLM to evaluate answer, OpenAI API Based)  
 - Codes: Links coming soon. 
 
-**11:45–12:30 — Live Demo 2 - Building an Agentic RAG Assistant.**  
+**3:45–4:30 — Live Demo 2 - Building an Agentic RAG Assistant.**  
 - An Agentic Workflow for Heart Failure Care Navigation
 - System architecture (Langchain-based)
 - Codes: https://github.com/Shumit07/ACM-BCB-Workshop/tree/Agentic
   
-**12:30–13:00 — Conclusion & Closing Q&A**  
+**4:30–5:00 — Conclusion & Closing Q&A**  
 - Future improvements & research directions   
 
 ---
