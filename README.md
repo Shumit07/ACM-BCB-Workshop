@@ -2,7 +2,7 @@
 
 ## 🚀 Agentic Capabilities Overview
 
-This project is an **agentic AI system** 🤖 designed to function as an autonomous support agent for high-risk cardiac patients ❤️. Unlike a standard chatbot that only answers questions, HeartWise perceives a user's need for direct intervention, reasons about the best course of action, and uses a suite of software tools to execute a multi-step plan to ensure patient safety.
+This project is an **agentic AI system** designed to function as an autonomous support agent for high-risk cardiac patients. Unlike a standard chatbot that only answers questions, HeartWise perceives a user's need for direct intervention, reasons about the best course of action, and uses a suite of software tools to execute a multi-step plan to ensure patient safety.
 
 The agent's core purpose is to bridge the gap between conversation and real-world action. When a high-risk patient signals distress, the agent autonomously performs the following functions:
 
