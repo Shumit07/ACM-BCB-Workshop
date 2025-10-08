@@ -75,8 +75,8 @@ Management**
 **11:45–12:30 — Live Demo 2 - Building an Agentic RAG Assistant.**  
 - An Agentic Workflow for Heart Failure Care Navigation
 - System architecture (Langchain-based)
-- Codes: Links coming soon. 
-
+- Codes: https://github.com/Shumit07/ACM-BCB-Workshop/tree/Agentic
+  
 **12:30–13:00 — Conclusion & Closing Q&A**  
 - Future improvements & research directions   
 
