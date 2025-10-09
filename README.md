@@ -97,11 +97,11 @@ Before the workshop, participants will receive:
 - A **Google Colab notebook** for interactive demos  
 
 Steps:  
-1. **Access notebooks**: open in Google Colab (preferred) or download locally  
-2. **Download data**: sample datasets included in repo (synthetic patient records, knowledge bases)  
-3. **Install dependencies**: via `requirements.txt` or provided Colab setup cells  
-4. **API keys (if needed)**:  if you have an OpenAI Plus account, please get the OpenAI key as follows: . If you do not have the API Keys, please get the Hugging Face keys as follows:
-5. **Test environment**: run a provided snippet to confirm everything works before the session  
+1. **Access notebooks**: Open in Google Colab (preferred) or download locally  
+2. **Download data**: Sample datasets included in repo (synthetic patient records, knowledge bases)  
+3. **Install dependencies**: Via `requirements.txt` or provided Colab setup cells  
+4. **API keys (if needed)**:  If you have an OpenAI Plus account, please get the OpenAI key as follows. 
+5. **Test environment**: Run a provided snippet to confirm everything works before the session  
 
 Participants not running code can still benefit by **observing demos** and interacting with the shared interface.  
 
