@@ -54,7 +54,7 @@ Attendees should have basic familiarity with **AI/ML concepts** and some **Pytho
 **01:00–01:45 — Introduction & Background**  
 - Welcome and workshop goals  
 - Chronic disease self-care challenges overview
-- PowerPoint presentation: Links coming soon.
+- PowerPoint presentation: [ACM-BCB-Intro-Saha](https://drive.google.com/file/d/1zBhEnbflA8WUBZhzQbZMR4LIS6734S8r/view?usp=sharing)
 
 **01:45–2:00 — Break / Q&A**  
 
