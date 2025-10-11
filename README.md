@@ -33,7 +33,7 @@ Interactive playground for personas, retrieval depth, and prompt variations.
 Lightweight reproducibility: CSV logs for answers and judge scores.
 
 🧭 HeartWise Workshop System Flow
-[START: User launches WorkShop.py]
+[START: Instructor launches WorkShop.py]
 
 │
 ▼
