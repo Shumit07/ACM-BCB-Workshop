@@ -159,6 +159,87 @@ Lightweight reproducibility: CSV logs for answers and judge scores.
 
 [END: User completes workshop]
 
+🧭 What students will actually use
+Shared Core (used by both paths)
+
+Concept loop: Retrieve → Ground → Generate → Evaluate → Log
+
+Code pieces they touch:
+
+Load knowledge: load_chunks_parquet() → returns List[Chunk]
+
+Encoder: get_minilm_encoder() (MiniLM)
+
+Retrieval: retrieve_topk(query, chunks, encoder, k)
+
+Prompt: build_flan_prompt(question, selected_chunks, system_text, persona)
+
+Judge: judge_lite(question, answer, citations)
+
+Logging: log_answer_row(...) and log_judge_row(...)
+These are all wired into Tab 3 (OpenAI) and Tab 4 (Local). 
+
+PATH A — OpenAI API RAG (Tab 3)
+
+[START: Student on Tab 3]
+│
+└── 1) Provide OPENAI_API_KEY (UI field) 🔐
+    - Stored in session/env for this run
+│
+└── 2) Retrieve Evidence 🔍
+    - chunks = load_chunks_parquet()
+    - encoder = get_minilm_encoder()
+    - (df_topk, selected) = retrieve_topk(question, chunks, encoder, k)
+│
+└── 3) Build Prompt 🧩
+    - system_text = read_demo_prompt()
+    - prompt = build_flan_prompt(question, selected, system_text, persona)
+│
+└── 4) Generate with OpenAI ☁️
+    - adapter = OpenAIAdapter(model="gpt-4o-mini")
+    - (answer, citations, latency, prompt_used) = adapter.generate(...)
+│
+└── 5) Evaluate + Log 📊
+    - scores = judge_lite(question, answer, citations)
+    - log_answer_row(... "openai", ...)
+    - log_judge_row(... "openai", ...)
+│
+▼
+[END: Answer shown + citations + scores]
+
+PATH B — Local HF on CPU (Tab 4)
+
+[START: Student on Tab 4]
+│
+└── 1) Choose model (default: flan-t5-base) 🧱
+    - Optional: click “Preload Models” (CPU-friendly load)
+│
+└── 2) Retrieve Evidence 🔍
+    - Same as Path A:
+      chunks = load_chunks_parquet()
+      encoder = get_minilm_encoder()
+      (df_topk, selected) = retrieve_topk(...)
+│
+└── 3) Build Prompt 🧩
+    - (done inside adapter.generate; same structure/intent)
+│
+└── 4) Generate Locally 🖥️
+    - adapterL = LocalHFAdapter("google/flan-t5-base")
+    - adapterL.preload() if needed
+    - (answer, citations, latency, prompt_used) = adapterL.generate(...)
+      • trims context
+      • first pass requires citations; if too short, retries w/o markers
+│
+└── 5) Evaluate + Log 📊
+    - scores = judge_lite(...)
+    - log_answer_row(... "local_hf", ...)
+    - log_judge_row(... "local_hf", ...)
+│
+▼
+[END: Answer (Local) + citations + scores]
+
+
+
   ▼
 ✅ Outcome Summary
 
