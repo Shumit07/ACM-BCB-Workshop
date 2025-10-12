@@ -6,7 +6,7 @@ from High_Risk import High_Risk_Patient_Action
 
 
 def get_chatbot_response(patient_id: str, summary: str, chat_history: list, user_prompt: str, api_key: str,
-                         risk_status: str, retrieved_chunks: list = None) -> str:
+                         risk_status: str, temperature: float = 0.0, retrieved_chunks: list = None):
     """
     Generates a response from the OpenAI API based on patient context and chat history.
 
@@ -16,6 +16,7 @@ def get_chatbot_response(patient_id: str, summary: str, chat_history: list, user
         chat_history: A list of previous chat messages (e.g., [{"role": "user", "content": "..."}, ...]).
         user_prompt: The new message from the user.
         api_key: The user's OpenAI API key.
+        temperature: The creativity of the response.
         risk_status: The patient's risk stratification ('high', 'moderate', 'low').
         retrieved_chunks: A list of Chunk objects retrieved based on the user's prompt.
 
@@ -55,7 +56,7 @@ Answer (YES or NO):"""
         if "YES" in intent_decision:
             if risk_status == 'high':
                 # For high-risk patients, execute the action and return the result.
-                action_message, er_locations = High_Risk_Patient_Action(patient_id, api_key)
+                action_message, er_locations = High_Risk_Patient_Action(patient_id, api_key, temperature=temperature)
                 response_data = {
                     "message": f"I have understood your request and taken action on your behalf. Here is the outcome:\n\n> {action_message}",
                     "locations": er_locations}
@@ -107,8 +108,8 @@ Answer (YES or NO):"""
     payload = {
         "model": model,
         "messages": api_messages,
-        "temperature": 0.5,
-        "max_tokens": 250,
+        "temperature": temperature,
+        "max_tokens": 4000,
     }
 
     try:
