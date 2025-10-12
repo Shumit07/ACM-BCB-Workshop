@@ -29,7 +29,11 @@ It cites sources inline ([1], [2], …) and refuses to speculate.
 Transparent Evaluation:
 Responses can be optionally scored using a heuristic “Judge-Lite” rubric (accuracy, safety, empathy, clarity, robustness).
 
-⚙️ System Architecture
+## ⚙️ System Architecture
+
+The diagram below shows the dual-path RAG workflow used in the workshop:
+
+```mermaid
 flowchart TD
   A[User Question] --> B[Retrieve: MiniLM Embeddings<br/>+ Cosine Similarity (Top-k)]
   B --> C[Ground: Build Prompt<br/>with Citations [1],[2],…]
@@ -40,7 +44,6 @@ flowchart TD
   E --> F[Display Answer + Sources]
   F --> G[Optional: Judge-Lite<br/>(accuracy, safety, empathy, clarity, robustness)]
   G --> H[Log to CSVs<br/>answers.csv · judge_runs.csv]
-
 
 🧩 Dual-Path Demonstration
 ☁️ Path A — OpenAI RAG
