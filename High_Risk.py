@@ -1,3 +1,5 @@
+# High_Risk.py
+
 import pandas as pd
 import OpenAI_Summarization
 import Find_ER
@@ -31,7 +33,7 @@ def High_Risk_Patient_Info(user_id: int) -> dict:
         return {'error': f"An unexpected error occurred: {e}"}
 
 
-def High_Risk_Patient_Action(id, api_key: str):
+def High_Risk_Patient_Action(id, api_key: str, temperature: float = 0.0):
     """
     Executes the high-risk patient protocol:
     - Generates a clinical summary
@@ -40,6 +42,7 @@ def High_Risk_Patient_Action(id, api_key: str):
     Args:
         id: The patient ID (can be string or int)
         api_key: OpenAI API key for summary generation
+        temperature: The creativity for the summary generation.
 
     Returns:
         A tuple of (message, er_locations) where:
@@ -66,7 +69,7 @@ def High_Risk_Patient_Action(id, api_key: str):
     # --- END DEBUGGING ---
 
     # Generate email summary and determine recipient
-    Email_Info = OpenAI_Summarization.Summary_Email(patient_record, api_key=api_key)
+    Email_Info = OpenAI_Summarization.Summary_Email(patient_record, api_key=api_key, temperature=temperature)
 
     # --- FIX: Check for errors from the summarization step before proceeding ---
     if len(Email_Info) < 4 or Email_Info[0] is None or Email_Info[0].lower() == "error":
@@ -133,8 +136,8 @@ def High_Risk_Patient_Action(id, api_key: str):
 # This block will only run if you execute this file directly (e.g., "python High_Risk.py")
 if __name__ == "__main__":
     # Test with a sample patient ID
-    test_api_key = "your_test_api_key_here"
-    result_message, result_locations = High_Risk_Patient_Action(2, test_api_key)
+    test_api_key = os.getenv("OPENAI_API_KEY") # Use env var for testing
+    result_message, result_locations = High_Risk_Patient_Action(2, test_api_key, temperature=0.5)
     print("\n--- Test Result ---")
     print(f"Message: {result_message}")
     print(f"Locations: {result_locations}")
