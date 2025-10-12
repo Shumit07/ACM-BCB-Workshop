@@ -30,28 +30,17 @@ Transparent Evaluation:
 Responses can be optionally scored using a heuristic “Judge-Lite” rubric (accuracy, safety, empathy, clarity, robustness).
 
 ⚙️ System Architecture
-[START: User enters question]
-       │
-       ▼
- [Retriever] → MiniLM Encoder
-       │
-       ▼
- [Top-k Context Selection]
-       │
-       ▼
- [Prompt Builder]
-       │
-       ├── Path A: OpenAI GPT-4o-mini (API)
-       └── Path B: FLAN-T5-base / large (Local CPU or Colab GPU)
-       │
-       ▼
- [Answer Generator]
-       │
-       ▼
- [Display Citations + Optional Judge-Lite Scoring]
-       │
-       ▼
-[END: User interprets results]
+flowchart TD
+  A[User Question] --> B[Retrieve: MiniLM Embeddings<br/>+ Cosine Similarity (Top-k)]
+  B --> C[Ground: Build Prompt<br/>with Citations [1],[2],…]
+  C --> D1[Path A — OpenAI<br/>GPT-4o-mini (API)]
+  C --> D2[Path B — Local / Colab<br/>FLAN-T5 / Qwen (HF)]
+  D1 --> E[Answer Generator]
+  D2 --> E[Answer Generator]
+  E --> F[Display Answer + Sources]
+  F --> G[Optional: Judge-Lite<br/>(accuracy, safety, empathy, clarity, robustness)]
+  G --> H[Log to CSVs<br/>answers.csv · judge_runs.csv]
+
 
 🧩 Dual-Path Demonstration
 ☁️ Path A — OpenAI RAG
