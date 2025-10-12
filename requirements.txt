@@ -1,0 +1,26 @@
+# ===============================
+# 🧠 HeartWise Simple-RAG Workshop
+# ===============================
+
+# --- Core utilities ---
+streamlit
+pandas
+numpy
+scikit-learn
+requests
+python-dotenv
+
+# --- Embedding and retrieval ---
+sentence-transformers
+
+# --- Local model (Hugging Face / Transformers CPU inference) ---
+transformers
+torch
+accelerate
+safetensors
+
+# --- Parquet & data handling ---
+pyarrow        # optional, only needed if you use data/chunks.parquet
+
+# --- Recommended: fix SSL / OpenSSL issues on Windows ---
+certifi
