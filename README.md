@@ -61,7 +61,6 @@ Attendees should have basic familiarity with **AI/ML concepts** and some **Pytho
 **2:00–2:45 — From RAG to Agentic RAG: Technical Foundations**  
 - Introduction to RAG and Agentic RAG
 - Frameworks overview
-- Environment setting up (API keys)
 - PowerPoint presentation: Links coming soon.
 
 **2:45–3:00 — Break / Q&A**  
