@@ -22,10 +22,10 @@ The agentic capability is triggered when a user with a 'high-risk' status uses a
 #### Prerequisites for HeartWise Emergency Response System
 
 <ol>
-  <li> **OpenAI API Key** - For clinical summary generation via GPT models</li>
-  <li> **Google Account with App Password** - For automated email sending via Gmail SMTP</li>
-  <li> **Geolocation API Access** - Nominatim geocoding service (free, no key required)</li>
-  <li> **Overpass API Access** - OpenStreetMap hospital data (free, no key required)</li>
+  <li> OpenAI API Key - For clinical summary generation via GPT models </li>
+  <li> Google Account with App Password - For automated email sending via Gmail SMTP </li>
+  <li> Geolocation API Access - Nominatim geocoding service (free, no key required) </li>
+  <li> Overpass API Access - OpenStreetMap hospital data (free, no key required) </li>
 </ol>
 
 ### 📊 Agentic Workflow Diagram
