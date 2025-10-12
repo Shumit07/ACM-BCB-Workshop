@@ -54,26 +54,26 @@ Attendees should have basic familiarity with **AI/ML concepts** and some **Pytho
 **01:00–01:45 — Introduction & Background**  
 - Welcome and workshop goals  
 - Chronic disease self-care challenges overview
-- PowerPoint presentation: [ACM-BCB-Intro-Saha](https://drive.google.com/file/d/1zBhEnbflA8WUBZhzQbZMR4LIS6734S8r/view?usp=sharing)
+- PowerPoint presentation: [Fundamentals of Chronic Disease Self-Care and LLM](https://drive.google.com/file/d/19pAjqSoCsYujgmAuw4EB_aXZOhOrnvxe/view?usp=sharing)
 
 **01:45–2:00 — Break / Q&A**  
 
 **2:00–2:45 — From RAG to Agentic RAG: Technical Foundations**  
 - Introduction to RAG and Agentic RAG
 - Frameworks overview
-- PowerPoint presentation: Links coming soon.
+- PowerPoint presentation: [RAG Overview](https://drive.google.com/file/d/1pAID5RK1N6FhNpUz9xYEypqScc9zesj4/view?usp=sharing)
 
 **2:45–3:00 — Break / Q&A**  
 
 **3:00–3:45 — Live Demo 1 - Building a RAG Assistant for Self-Care
 Management**  
-- Scenario: Heart Failure Patients' self-care assistant  
-- System architecture (Naive RAG with a Judge LLM to evaluate answer, OpenAI API Based)  
+- Scenario: Heart Failure Patients' Self-Care Assistant  
+- System architecture (Naive RAG with a LLM to evaluate answers: OpenAI API and Local Model Based)  
 - Codes: https://github.com/Shumit07/ACM-BCB-Workshop/tree/Simple-RAG
 
 **3:45–4:30 — Live Demo 2 - Building an Agentic RAG Assistant with Care Navigation**  
 - An Agentic Workflow for Heart Failure Care Navigation
-- System architecture (Langchain-based)
+- System architecture (OpenAI API Based)
 - Codes: https://github.com/Shumit07/ACM-BCB-Workshop/tree/Agentic
   
 **4:30–5:00 — Conclusion & Closing Q&A**  
