@@ -19,6 +19,15 @@ The agent's core purpose is to bridge the gap between conversation and real-worl
 
 The agentic capability is triggered when a user with a 'high-risk' status uses an action-oriented prompt. The system then follows a dynamic, conditional workflow to achieve its goal of ensuring patient safety.
 
+#### Prerequisites for HeartWise Emergency Response System
+
+<ol>
+  <li>**OpenAI API Key** - For clinical summary generation via GPT models</li>
+  <li>**Google Account with App Password** - For automated email sending via Gmail SMTP</li>
+  <li>**Geolocation API Access** - Nominatim geocoding service (free, no key required)</li>
+  <li>**Overpass API Access** - OpenStreetMap hospital data (free, no key required)</li>
+</ol>
+
 ### 📊 Agentic Workflow Diagram
 
 ```text
