@@ -560,6 +560,7 @@ with tab_agentic:
             patient_ids = patient_df["ID"].dropna().unique().tolist()
             selected_patient_id = st.selectbox("Select Patient ID", options=patient_ids)
             st.info("For this demo, please provide your OpenAI API key below. It is not stored.", icon="🔑")
+            agentic_temp = st.slider("Temperature", 0.0, 1.0, 0.5, 0.1, key="agentic_temp", help="Controls the creativity of the chatbot's responses.")
             openai_api_key = st.text_input("OpenAI API Key", type="password", key="agentic_api_key")
 
         # --- Chat Interface ---
@@ -583,7 +584,7 @@ with tab_agentic:
             if st.button("❤️‍🩹 Request HeartWise to take action on your behalf"):
                 if risk_status == 'high':
                     with st.spinner("Initiating high-risk patient protocol... This may involve sending notifications."):
-                        action_message, er_locations = High_Risk_Patient_Action(selected_patient_id)
+                        action_message, er_locations = High_Risk_Patient_Action(selected_patient_id, api_key=openai_api_key, temperature=agentic_temp)
                         st.success(action_message)
                         if er_locations:
                             st.subheader("Nearest Emergency Rooms")
@@ -651,6 +652,7 @@ with tab_agentic:
                                  chat_history=st.session_state[session_key],
                                  user_prompt=prompt,
                                  api_key=openai_api_key,
+                                 temperature=agentic_temp,
                                  risk_status=risk_status, # Pass the risk status
                                  retrieved_chunks=retrieved_chunks
                              )
