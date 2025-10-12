@@ -70,7 +70,7 @@ Attendees should have basic familiarity with **AI/ML concepts** and some **Pytho
 Management**  
 - Scenario: Heart Failure Patients' self-care assistant  
 - System architecture (Naive RAG with a Judge LLM to evaluate answer, OpenAI API Based)  
-- Codes: Links coming soon. 
+- Codes: https://github.com/Shumit07/ACM-BCB-Workshop/tree/Simple-RAG
 
 **3:45–4:30 — Live Demo 2 - Building an Agentic RAG Assistant with Care Navigation**  
 - An Agentic Workflow for Heart Failure Care Navigation
