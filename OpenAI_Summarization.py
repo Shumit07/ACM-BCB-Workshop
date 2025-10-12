@@ -3,13 +3,14 @@ import math
 import pandas as pd
 
 
-def Summary_Email(patient_data: dict, api_key: str) -> tuple:
+def Summary_Email(patient_data: dict, api_key: str, temperature: float = 0.0) -> tuple:
     """
     Generates a clinical summary using OpenAI and determines email recipient.
 
     Args:
         patient_data: Dictionary containing patient information
         api_key: OpenAI API key
+        temperature: The creativity for the summary generation.
 
     Returns:
         A tuple of (pcp_status, clinical_summary, recipient_email, patient_location)
@@ -46,7 +47,7 @@ def Summary_Email(patient_data: dict, api_key: str) -> tuple:
                  "content": "You are an expert assistant that writes clinical summaries in a narrative paragraph format for medical professionals."},
                 {"role": "user", "content": prompt}
             ],
-            temperature=0.5,
+            temperature=temperature,
         )
         clinical_summary = response.choices[0].message.content
     except ValueError as ve:
