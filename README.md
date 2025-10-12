@@ -33,6 +33,7 @@ Responses can be optionally scored using a heuristic “Judge-Lite” rubric (ac
 
 The diagram below shows the dual-path RAG workflow used in the workshop:
 
+
   A[User Question] --> B[Retrieve: MiniLM Embeddings<br/>+ Cosine Similarity (Top-k)]
   B --> C[Ground: Build Prompt<br/>with Citations [1],[2],…]
   C --> D1[Path A — OpenAI<br/>GPT-4o-mini (API)]
@@ -42,6 +43,8 @@ The diagram below shows the dual-path RAG workflow used in the workshop:
   E --> F[Display Answer + Sources]
   F --> G[Optional: Judge-Lite<br/>(accuracy, safety, empathy, clarity, robustness)]
   G --> H[Log to CSVs<br/>answers.csv · judge_runs.csv]
+
+  
 
 🧩 Dual-Path Demonstration
 ☁️ Path A — OpenAI RAG
@@ -54,9 +57,6 @@ Demonstrates high-quality cloud inference with reproducible logging.
 
 Focus: API integration, latency awareness, citation control.
 
-export OPENAI_API_KEY=sk-...
-streamlit run app_openai.py
-
 💻 Path B — Local RAG (CPU / GPU / Colab)
 
 For attendees without an API key
@@ -66,15 +66,6 @@ Uses flan-t5-base (or flan-t5-large) via Hugging Face Transformers.
 Can optionally connect to a Colab GPU endpoint (RemoteHFAdapter).
 
 Focus: privacy, transparency, model introspection.
-
-streamlit run app_local.py
-
-ACM-BCB-Workshop/
-├── app_openai.py      # Path A – Cloud RAG
-├── app_local.py       # Path B – Local/Colab RAG
-├── requirements.txt   # Shared dependencies
-├── .gitignore
-└── README.md
 
 🎓 Teaching Objectives
 
