@@ -33,8 +33,6 @@ Responses can be optionally scored using a heuristic “Judge-Lite” rubric (ac
 
 The diagram below shows the dual-path RAG workflow used in the workshop:
 
-```mermaid
-flowchart TD
   A[User Question] --> B[Retrieve: MiniLM Embeddings<br/>+ Cosine Similarity (Top-k)]
   B --> C[Ground: Build Prompt<br/>with Citations [1],[2],…]
   C --> D1[Path A — OpenAI<br/>GPT-4o-mini (API)]
