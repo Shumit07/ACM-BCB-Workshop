@@ -68,7 +68,7 @@ This allows you to compare CPU vs GPU performance live during the workshop.
 Visit Google Colab
  → click New Notebook
 
-Copy the Colab code block from this repository (e.g., colab_server.py)
+Copy the Colab code block from this repository (e.g., gpu_set_up.py)
 
 Paste it into a new Colab cell
 
@@ -100,7 +100,7 @@ ngrok.set_auth_token("YOUR_AUTHTOKEN_HERE")
 
 Run the main Colab block:
 
-!python colab_server.py
+!python gpu_set_up.py
 
 
 You should see output similar to:
