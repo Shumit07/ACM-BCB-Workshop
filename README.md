@@ -22,6 +22,61 @@ The agentic capability is triggered when a user with a 'high-risk' status uses a
 ### 📊 Agentic Workflow Diagram
 
 ```text
+[START: Patient expresses distress/need for help] 🆘
+    │
+    ▼
+[SYSTEM: Emergency Response Protocol Activated]
+    │
+    └─── 1. Risk Assessment Check 📊
+         │
+         ├── Low/Moderate Risk ──> [Supportive Guidance] ──> [STOP] 🛑
+         │   └── "Continue care plan"
+         │
+         └── HIGH RISK ──> [Emergency Protocol Initiated] 🚨
+              │
+              ▼
+         2. Patient Data Aggregation 📋
+              ├── Medical history retrieved
+              ├── Recent symptoms analyzed
+              ├── Chat logs compiled
+              └── Contact information verified
+              │
+              ▼
+         3. Clinical Summary Generation 🏥
+              ├── AI analyzes complete patient profile
+              ├── Creates medical-grade summary
+              └── Formats for rapid clinical review
+              │
+              ▼
+         4. Care Coordination Decision Point 🔀
+              │
+              ├── PATH A: Has Primary Care Physician ──────┐
+              │                                            │
+              └── PATH B: No PCP on File ───────┐          │
+                   │                            │          │
+                   ▼                            │          ▼
+         5B. Emergency Room Locator             │    5A. PCP Notification 👨‍⚕️
+              ├── Geocoding activated           │         ├── Urgent email sent
+              ├── Hospital search (expanding)   │         ├── Clinical summary provided for help
+              ├── 5 nearest ERs identified      │              │
+              └── Distance calculation          │              │
+                   │                            │              │
+                   ▼                            │              ▼
+         6B. Patient Direct Notification        │    6A. Confirmation to Patient ✅
+              ├── Email with clinical summary   │         └── "Your doctor has been notified"
+              ├── ER list with distances        │
+              ├── Interactive map provided      │
+              └── "Seek immediate care"         │
+                   │                            │
+                   └────────────┬───────────────┘
+                                │
+                                ▼
+[END: Patient receives confirmation + next steps + visual aids] ✅
+```
+
+### 📊 Agentic Codeflow Diagram
+
+```text
 [START: User issues 'Take Action' prompt]
     │
     ▼
