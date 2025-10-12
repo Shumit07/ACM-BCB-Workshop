@@ -116,8 +116,6 @@ In your local app_local.py (Tab 4 of the app):
 
 Paste the copied ngrok URL into the Colab URL input box
 
-Choose the GPU option in the interface
-
 Run your query — it will now use the remote GPU model
 
 🎓 Teaching Objectives
