@@ -58,6 +58,68 @@ Can optionally connect to a Colab GPU endpoint (RemoteHFAdapter).
 
 Focus: privacy, transparency, model introspection.
 
+☁️ Running the GPU (Colab) Version
+
+If your local computer doesn’t have enough CPU power to run larger models, you can offload generation to a Colab GPU using ngrok and FastAPI.
+This allows you to compare CPU vs GPU performance live during the workshop.
+
+🧩 1️⃣ Open a New Google Colab Notebook
+
+Visit Google Colab
+ → click New Notebook
+
+Copy the Colab code block from this repository (e.g., colab_server.py)
+
+Paste it into a new Colab cell
+
+⚙️ 2️⃣ Install Dependencies
+
+Run the following cell first:
+
+!pip -q install fastapi uvicorn transformers accelerate safetensors pyngrok --upgrade
+
+🔐 3️⃣ Create a Free ngrok Account
+
+Go to https://dashboard.ngrok.com/signup
+
+After verifying your email, click
+Getting Started → Your Authtoken
+
+Copy your personal token — it looks like this:
+
+2oxvxxxxxxxxxxxxxxxxxxxxxx_QwPxxxxxxxxxxxxxxxxxxxxx
+
+🪄 4️⃣ Add the ngrok Token in Colab
+
+In a new cell before running the FastAPI server, paste:
+
+from pyngrok import ngrok
+ngrok.set_auth_token("YOUR_AUTHTOKEN_HERE")
+
+🚀 5️⃣ Start the FastAPI Server
+
+Run the main Colab block:
+
+!python colab_server.py
+
+
+You should see output similar to:
+
+🌐 Public URL: https://abcd1234.ngrok-free.app
+
+
+Copy this public URL — it’s your live GPU endpoint.
+
+💻 6️⃣ Connect Streamlit → Colab GPU
+
+In your local app_local.py (Tab 4 of the app):
+
+Paste the copied ngrok URL into the Colab URL input box
+
+Choose the GPU option in the interface
+
+Run your query — it will now use the remote GPU model
+
 🎓 Teaching Objectives
 
 By the end of the workshop, participants will:
