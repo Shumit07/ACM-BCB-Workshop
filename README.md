@@ -34,16 +34,6 @@ Responses can be optionally scored using a heuristic “Judge-Lite” rubric (ac
 The diagram below shows the dual-path RAG workflow used in the workshop:
 
 
-  A[User Question] --> B[Retrieve: MiniLM Embeddings<br/>+ Cosine Similarity (Top-k)]
-  B --> C[Ground: Build Prompt<br/>with Citations [1],[2],…]
-  C --> D1[Path A — OpenAI<br/>GPT-4o-mini (API)]
-  C --> D2[Path B — Local / Colab<br/>FLAN-T5 / Qwen (HF)]
-  D1 --> E[Answer Generator]
-  D2 --> E[Answer Generator]
-  E --> F[Display Answer + Sources]
-  F --> G[Judge-Lite<br/>(accuracy, safety, empathy, clarity, robustness)]
-  G --> H[Log to CSVs<br/>answers.csv · judge_runs.csv]
-
 <img width="606" height="190" alt="image" src="https://github.com/user-attachments/assets/3fe8848d-1682-463c-ac66-122b72d1edd8" />
 
 
