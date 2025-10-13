@@ -4,10 +4,6 @@
 ## 🏛️ Workshop Info  
 The workshop was held on October 12th from 1 - 5 PM EST at the 16th ACM Conference on Bioinformatics, Computational Biology, and Health Informatics (ACM-BCB 2025). ACM BCB is the flagship conference of the ACM SIGBio (https://acm-bcb.org/). The ACM-BCB 2025 will be held in Philadelphia, PA, USA from October 12 - 15th, 2025. 
 
-Survey Link: https://docs.google.com/forms/d/e/1FAIpQLScvQpx6Oeh_27vGQyI2aJE_iVBiAO0uu1KyTDVKCFVs5INU9Q/viewform?usp=sharing&ouid=112247876002193686497 
-
-<img width="192" height="192" alt="image" src="https://github.com/user-attachments/assets/f6cced47-78a3-4111-a752-471264ea5f08" />
-
 
 ## 📝 Citing this Workshop  
 Please cite this workshop as:  
